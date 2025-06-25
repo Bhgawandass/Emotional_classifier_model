@@ -96,6 +96,8 @@ emotion-classification-app/
 ├── test.py
 └── README.md
 ```
+##streamlit link
+(https://emotionalclassifiermodel-9zs5eqjjklzasllvogsnrw.streamlit.app/)
 
 ## 💡 What's Next
 
