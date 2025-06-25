@@ -66,7 +66,7 @@ The app allows users to:
 
 ```bash
 # Clone repo
-https://github.com/sukhmandeep2125/emotion-classification-app.git
+https://github.com/Bhgawandass/Emotional_classifier_model.git
 
 # Create virtual env
 python -m venv mars
@@ -106,7 +106,7 @@ emotion-classification-app/
 
 ---
 
-**Author**: [Bhagwan Dass](https://github.com/sukhmandeep2125)
+**Author**: [Bhagwan Dass](https://github.com/Bhgawandass)
 
 **License**: MIT
 "# Emotional_classifier" 
