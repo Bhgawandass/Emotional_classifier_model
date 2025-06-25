@@ -2,13 +2,12 @@
 
 ## 🔍 Project Overview
 
-This project focuses on building and deploying a Speech Emotion Recognition (SER) system using deep learning. The application classifies emotions from speech using MFCC features and a GRU-based model with an Attention layer. It supports audio input in `.wav` format and predicts one of eight emotional states.
+This project involves developing a deep learning-based system for recognizing emotions in speech. By extracting MFCC features from audio signals, it uses a GRU architecture enhanced with an attention mechanism to identify emotional states. The system accepts .wav audio files as input and is capable of detecting one of eight predefined emotions.
 
-## 🎯 Objectives
-
-* Detect human emotions from speech using machine learning.
-* Build an interactive web app using Streamlit.
-* Deploy the app seamlessly on Streamlit Cloud.
+## 🎯 Goals
+* Automatically recognize emotional states in speech recordings.
+* Create an intuitive user interface for real-time inference.
+* Deploy a fully functional app to the web using Streamlit Cloud.
 
 ## 🧠 Dataset: RAVDESS
 
@@ -18,17 +17,17 @@ This project focuses on building and deploying a Speech Emotion Recognition (SER
 
 ## 🧹 Data Preprocessing
 
-1. **File Parsing**: Traverse RAVDESS folders to extract file paths and emotion labels.
-2. **Audio Features**: Extract 40-dimensional MFCCs per frame with `librosa`.
-3. **Padding**: All MFCCs padded/truncated to a fixed length of 174 frames for consistency.
-4. **Label Encoding**: Emotions encoded using `LabelEncoder` from `sklearn`.
+1. **Audio loading**:Navigates RAVDESS directories to access .wav files and extract emotion metadata.
+2. **Features Extraction**: Converts each audio clip into 40 MFCCs per frame using librosa.
+3. **Normalization**:All audio features are padded or truncated to 174 frames for uniform input.
+4. **Encoding**: Emotion labels are transformed to numeric format using scikit-learn’s LabelEncoder.
 
 ## 🧱 Model Architecture
 
 * **Input**: `(174, 40)` MFCC features
-* **Layer 1**: Bidirectional GRU (128 units)
-* **Layer 2**: Attention Layer (custom)
-* **Dense**: Fully connected layer for classification
+* **GRU Layer**: Bidirectional GRU (128 units)
+* **Attention Layer**: Attention Layer (custom)
+* **Dense Outout**: Fully connected layer for classification
 * **Activation**: `softmax`
 
 > ✅ The model is trained using categorical cross-entropy and Adam optimizer.
@@ -51,9 +50,9 @@ After tuning and training:
 
 The app allows users to:
 
-* Upload `.wav` files
-* Listen to audio playback
-* View predicted emotion
+* Upload and preview .wav files
+* Automatic MFCC extraction and prediction
+* Instant emotion classification results
 
 ### Key Features
 
@@ -86,7 +85,7 @@ streamlit run app.py
 * ✅ Ensure `emotion_gru_attention_model.h5` and `label_encoder.pkl` are in repo
 * ✅ Correct `requirements.txt` (compatible with both `tensorflow==2.11.0` and `streamlit==1.25.0`)
 
-## 📁 Project Structure
+## 📁 Directory Layout
 
 ```
 emotion-classification-app/
@@ -98,15 +97,16 @@ emotion-classification-app/
 └── README.md
 ```
 
-## 💡 Future Improvements
+## 💡 What's Next
 
-* Use larger and more diverse datasets
+* Integrate real-time recording via microphone input
 * Add multilingual support
-* Include live microphone input
-* Try transformer-based architectures (e.g., Wav2Vec, HuBERT)
+* Experiment with transformer-based models (e.g., Wav2Vec2.0, HuBERT)
+* Expand training with more diverse datasets
 
 ---
 
-**Author**: [Sukhmandeep Singh](https://github.com/sukhmandeep2125)
+**Author**: [Bhagwan Dass](https://github.com/sukhmandeep2125)
 
 **License**: MIT
+"# Emotional_classifier" 
